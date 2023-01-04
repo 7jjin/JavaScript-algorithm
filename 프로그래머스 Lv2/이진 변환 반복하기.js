@@ -1,8 +1,8 @@
 function solution(s) {
-    var answer = [0, 0]; //정답의 초기값을 모두 0으로 할당하였다.
+    var answer = [0, 0]; 
     let tmp = [];
     while(s.length > 1) { //길이가 1이 될때까지 반복한다.
-        tmp = s.split("").filter(e => e == 1); //문자열을 쪼개서 배열에 넣고, 필터메서드로 1만 남겼다.
+        tmp = s.split("").filter(e => e == 1); //문자열을 쪼개서 배열에 넣고
         answer[1] += (s.length - tmp.length); //제거한 0의 갯수를 anwer에 더한다.
         s = tmp.length.toString(2); //배열의 길이를 2진수로 변환하였다.
         answer[0]++; //변환횟수를 추가하였다.
